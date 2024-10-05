@@ -13,11 +13,20 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/products', (req, res) => {
-    res.send('/api/products hit')
+    res.send(books);
 });
 
 app.get('/api/products/:id', (req, res) => {
-    res.send('/api/products/:id hit')
+    const id = req.params.id;
+    const selectedBook = books.find((aBook) => aBook.bookId === parseInt(id));
+    if (selectedBook) {
+        res.send(selectedBook);
+    } else {
+        res.send({
+            id: parseInt(id),
+            message: 'No books found with this id!',
+        });
+    }
 });
 
 app.listen(port, () => {
