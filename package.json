@@ -1,0 +1,17 @@
+{
+  "name": "simple-book-shop-server",
+  "version": "1.0.0",
+  "description": "simple book shop server",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "simple-book-shop-server": "file:"
+  }
+}
